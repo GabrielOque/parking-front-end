@@ -28,7 +28,7 @@
 
 ### Tecnologías
 
-> Next.js, Redux Toolkit, Tailwind CSS, Axios
+> Next.js, Redux Toolkit, Tailwind CSS, Axios, Vercel
 
 ### Autenticación
 
@@ -36,7 +36,8 @@ La aplicación utiliza autenticación basada en tokens. Si el usuario no está a
 
 ### Pasos para usar la aplicación
 
-1. **Iniciar sesión**: Utilice las credenciales proporcionadas (email: `employee1@gmail.com`, password: `1234`) para iniciar sesión en la plataforma.
+1. **Iniciar sesión**: Utilice las credenciales proporcionadas (email: `employee1@gmail.com`, password: `1234`) para iniciar sesión en la plataforma, para hacerlo en local use: http://localhost:3000, para hacerlo en la app desplegada en vercel usar:
+   https://parking-front-end.vercel.app
 2. **Ver parqueadero**: Acceda a la sección del parqueadero para ver las disponibilidades actuales.
 3. **Realizar un nuevo registro**: Podrá registrar un nuevo vehículo en el parqueadero siempre que haya disponibilidad. Si no hay espacio, el sistema bloqueará la opción de registro.
 4. **Detalles del vehículo**: Podrá ver los detalles del auto que está parqueado.
