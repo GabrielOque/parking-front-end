@@ -9,7 +9,7 @@ export const LoginEmployee = createAsyncThunk(
   async (formData, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        `http://localhost:4000/api/employee/login`,
+        `${NEXT_PUBLIC_API_URL}/employee/login`,
         formData
       );
       return response.data;
