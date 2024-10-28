@@ -1,7 +1,7 @@
 > [!WARNING]
 > Tener conexión a internet. La base de datos está en la nube. Si desea levantarla en local, agregue el archivo `.env` en la raíz del proyecto y añada: `NEXT_PUBLIC_API_URL=http://localhost:4000/api`.
 
-> EasyPark es una plataforma web que permite registrar autos y motos en un parqueadero. Las capacidades son limitadas.
+> EasyPark es una plataforma web que permite registrar autos y motos en un parqueadero. Las capacidades son limitadas, la web se adapta a los tipos de pantalla para mejorar así la experiencia de usuario (Responsive)
 
 > [!NOTE]
 > Asegúrese de tener las versiones estables de Node y npm.
