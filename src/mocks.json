@@ -1,0 +1,58 @@
+{
+  "employees": [
+    {
+      "_id": { "$oid": "671ef0fa51c9ca5819ef6363" },
+      "name": "Gabriel",
+      "email": "employee1@gmail.com",
+      "password": "$2b$10$WpXcgnZJ/eUB7/0isCPcH.JCeNdRbqPwGdWh8T6t6jIy9kwmFh86W",
+      "role": "EMPLOYEE",
+      "createdAt": { "$date": { "$numberLong": "1730081018501" } },
+      "updatedAt": { "$date": { "$numberLong": "1730081018501" } },
+      "__v": { "$numberInt": "0" }
+    }
+  ],
+  "registers": [
+    {
+      "_id": { "$oid": "671f05f051c9ca5819ef6382" },
+      "checkIn": "2024-10-09T22:32",
+      "checkOut": "Mon Oct 28 2024 05:47:43 GMT+0000 (Coordinated Universal Time)",
+      "nameVehicle": "Carro1",
+      "owner": "asdsad",
+      "documentNumber": "dasdasd",
+      "plate": "asdasd",
+      "status": "COMPLETED",
+      "employee": { "$oid": "671ef0fa51c9ca5819ef6363" },
+      "createdAt": { "$date": { "$numberLong": "1730086384450" } },
+      "updatedAt": { "$date": { "$numberLong": "1730094463712" } },
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "671f05c951c9ca5819ef637a" },
+      "checkIn": "2024-10-17T22:32",
+      "checkOut": "Sun Oct 27 2024 22:33:38 GMT-0500 (hora estándar de Colombia)",
+      "nameVehicle": "Carro4",
+      "owner": "dscasas",
+      "documentNumber": "das",
+      "plate": "asdasdas",
+      "status": "COMPLETED",
+      "employee": { "$oid": "671ef0fa51c9ca5819ef6363" },
+      "createdAt": { "$date": { "$numberLong": "1730086345841" } },
+      "updatedAt": { "$date": { "$numberLong": "1730086418946" } },
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "671f11568f8374dc30e681bc" },
+      "checkIn": "2024-10-12T01:21",
+      "checkOut": "Mon Oct 28 2024 05:47:54 GMT+0000 (Coordinated Universal Time)",
+      "nameVehicle": "Carro6",
+      "owner": "Gabriel",
+      "documentNumber": "1001544752",
+      "plate": "BF-23545",
+      "status": "COMPLETED",
+      "employee": { "$oid": "671ef0fa51c9ca5819ef6363" },
+      "createdAt": { "$date": { "$numberLong": "1730089302255" } },
+      "updatedAt": { "$date": { "$numberLong": "1730094474919" } },
+      "__v": { "$numberInt": "0" }
+    }
+  ]
+}
