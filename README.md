@@ -1,7 +1,7 @@
 > [!WARNING]
 > Tener conexión a internet. La base de datos está en la nube. Si desea levantarla en local, agregue el archivo `.env` en la raíz del proyecto y añada: `NEXT_PUBLIC_API_URL=http://localhost:4000/api`.
 
-> EasyPark es una plataforma web que permite registrar autos y motos en un parqueadero. Las capacidades son limitadas.
+> EasyPark es una plataforma web que permite registrar autos y motos en un parqueadero. Las capacidades son limitadas, la web se adapta a los tipos de pantalla para mejorar así la experiencia de usuario (Responsive)
 
 > [!NOTE]
 > Asegúrese de tener las versiones estables de Node y npm.
@@ -21,14 +21,17 @@
 > Clonar, instalar y levantar primero el backend.
 
 > [!NOTE]
-> Credenciales de usuario: [email: employee1@gmail.com, password: 1234]. Las contraseñas están encriptadas en el backend.
+> Credenciales de usuario: [email: employee1@gmail.com, password: 1234]. Las contraseñas están encriptadas en el backend, la primera vez que hagan login tardará un poco, ya que estos servidores de prueba gratuita cuando tienen un periodo de tiempo sin peticiones entran en un modo off entonces el recivir una nueva petición deben hacer su proceso interno.
+
+> [!NOTE]
+> No se anexa mocks utilizados dado que al crear el front que es algo adicional, no veo necesario agregarlos sin embargo en el proyecto veran un archivo llamado mokcs, no se usó en el proyecto lo hago con el animo de anexarles la base de datos y de nuevo los accesos para hacer login, no deberían necesitarse ya que la api está integrada con el front.
 
 > [!WARNING]
 > Asegúrese de que la conexión Wi-Fi que tenga al levantar el backend y el frontend no bloquee los puertos, ya que podría causar problemas.
 
 ### Tecnologías
 
-> Next.js, Redux Toolkit, Tailwind CSS, Axios
+> Next.js, Redux Toolkit, Tailwind CSS, Axios, Vercel
 
 ### Autenticación
 
@@ -36,7 +39,8 @@ La aplicación utiliza autenticación basada en tokens. Si el usuario no está a
 
 ### Pasos para usar la aplicación
 
-1. **Iniciar sesión**: Utilice las credenciales proporcionadas (email: `employee1@gmail.com`, password: `1234`) para iniciar sesión en la plataforma.
+1. **Iniciar sesión**: Utilice las credenciales proporcionadas (email: `employee1@gmail.com`, password: `1234`) para iniciar sesión en la plataforma, para hacerlo en local use: http://localhost:3000, para hacerlo en la app desplegada en vercel usar:
+   https://parking-front-end.vercel.app
 2. **Ver parqueadero**: Acceda a la sección del parqueadero para ver las disponibilidades actuales.
 3. **Realizar un nuevo registro**: Podrá registrar un nuevo vehículo en el parqueadero siempre que haya disponibilidad. Si no hay espacio, el sistema bloqueará la opción de registro.
 4. **Detalles del vehículo**: Podrá ver los detalles del auto que está parqueado.
