@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[!WARNING] Tener conexión a internet. La base de datos está en la nube. Si desea levantarla en local, agregue el archivo .env en la raíz del proyecto y añada: NEXT_PUBLIC_API_URL=http://localhost:4000/api.
 
-## Getting Started
+EasyPark es una plataforma web que permite registrar autos y motos en un parqueadero. Las capacidades son limitadas.
 
-First, run the development server:
+[!NOTE] Asegúrese de tener las versiones estables de Node y npm. Versiones usadas:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Node: v20.9.0
+npm: 10.5.2
+[!NOTE] Ejecute npm install cuando clone el repositorio para instalar las dependencias. Use npm run dev para levantar el proyecto. Recuerde que primero debe tener el backend corriendo y las variables de entorno configuradas.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[!IMPORTANT] Cree el archivo .env y agregue las siguientes variables de entorno: NEXT_PUBLIC_API_URL=http://localhost:4000/api.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+[!IMPORTANT] Clonar, instalar y levantar primero el backend.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+[!NOTE] Credenciales de usuario: [email: employee1@gmail.com, password: 1234]. Las contraseñas están encriptadas en el backend.
 
-## Learn More
+[!WARNING] Asegúrese de que la conexión Wi-Fi que tenga al levantar el backend y el frontend no bloquee los puertos, ya que podría causar problemas.
 
-To learn more about Next.js, take a look at the following resources:
+Tecnologías
+Next.js, Redux Toolkit, Tailwind CSS, Axios
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Autenticación
+La aplicación utiliza autenticación basada en tokens. Si el usuario no está autenticado, no podrá acceder a las funciones de la aplicación. Una vez que el usuario inicie sesión, se generará un token que permite el acceso sin necesidad de ingresar credenciales nuevamente durante un plazo de 1 hora. Después de este tiempo, el token expirará y será necesario volver a iniciar sesión.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pasos para usar la aplicación
+Iniciar sesión: Utilice las credenciales proporcionadas (email: employee1@gmail.com, password: 1234) para iniciar sesión en la plataforma.
+Ver parqueadero: Acceda a la sección del parqueadero para ver las disponibilidades actuales.
+Realizar un nuevo registro: Podrá registrar un nuevo vehículo en el parqueadero siempre que haya disponibilidad. Si no hay espacio, el sistema bloqueará la opción de registro.
+Detalles del vehículo: Podrá ver los detalles del auto que está parqueado.
+Registrar salida: Tendrá la opción de registrar la salida del vehículo y liberar el espacio correspondiente en el parqueadero.
+Problemas comunes
+Problemas de conexión: Asegúrese de que su conexión a internet no esté bloqueando los puertos necesarios.
+Errores de autenticación: Verifique que las credenciales de usuario sean correctas.
+Falta de disponibilidad: Si no puede registrar un vehículo, compruebe si hay espacio disponible en el parqueadero.
