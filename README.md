@@ -23,6 +23,9 @@
 > [!NOTE]
 > Credenciales de usuario: [email: employee1@gmail.com, password: 1234]. Las contraseñas están encriptadas en el backend.
 
+> [!NOTE]
+> No se anexa mocks utilizados dado que al crear el front que es algo adicional, no veo necesario agregarlos sin embargo en el proyecto veral un archivo llamado mokcs, no se usó en el proyecto lo hago con el animo de anexarles la base de datos y de nuevo los accesos para hacer login, no deberían necesitarsse ya que la api ya está  ien integrada con el front.
+
 > [!WARNING]
 > Asegúrese de que la conexión Wi-Fi que tenga al levantar el backend y el frontend no bloquee los puertos, ya que podría causar problemas.
 
