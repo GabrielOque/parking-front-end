@@ -37,6 +37,7 @@ const RegisterExit = () => {
     const totalHours = Math.ceil((outDate - inDate) / (1000 * 60 * 60));
     return totalHours * pricePerHour;
   };
+
   const formatCurrency = (value) => {
     return new Intl.NumberFormat("es-CO", {
       style: "currency",
@@ -68,7 +69,7 @@ const RegisterExit = () => {
   }, [success]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-full bg-gray-900 p-8">
+    <div className="flex flex-col items-center justify-center bg-gray-900 p-8 h-full">
       <h1 className="text-2xl font-semibold text-white mb-4">
         Registrar Salida
       </h1>
@@ -80,22 +81,36 @@ const RegisterExit = () => {
         onChange={(e) => setSearchTerm(e.target.value)}
         className="bg-gray-700 text-white px-4 py-2 rounded focus:outline-none mb-4 w-full lg:w-1/2"
       />
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 w-full lg:w-1/2">
-        {filteredVehicles.map((vehicle, index) => (
-          <div
-            key={index}
-            className="bg-gray-800 p-4 rounded-lg cursor-pointer hover:shadow-lg transition-shadow"
-            onClick={() => handleCardClick(vehicle)}
-          >
-            <img
-              src={`/${vehicle.nameVehicle}_SinFondo.png`}
-              alt={vehicle.nameVehicle}
-              className="w-full h-24 object-cover mb-2 rounded"
-            />
-            <h3 className="text-white font-semibold">{vehicle.owner}</h3>
-            <p className="text-gray-400">Placa: {vehicle.plate}</p>
-          </div>
-        ))}
+      <div
+        className="flex justify-center w-full lg:w-1/2"
+        style={{
+          height: "calc(100vh - 248px)",
+          overflowY: "auto",
+          scrollbarColor: "#4B5563 #1F2937",
+        }}
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full p-4">
+          {filteredVehicles.map((vehicle, index) => (
+            <div
+              key={index}
+              className="bg-gray-800 p-4 rounded-lg cursor-pointer flex flex-col justify-between"
+              onClick={() => handleCardClick(vehicle)}
+              style={{
+                aspectRatio: "1 / 1",
+              }}
+            >
+              <div className="">
+                <img
+                  src={`/${vehicle.nameVehicle}_SinFondo.png`}
+                  alt={vehicle.nameVehicle}
+                  className="object-contain mb-2"
+                />
+              </div>
+              <h3 className="text-white font-semibold">{vehicle.owner}</h3>
+              <p className="text-gray-400">Placa: {vehicle.plate}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {isModalOpen && selectedVehicle && (
