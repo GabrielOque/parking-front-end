@@ -5,7 +5,7 @@ export default function Layout({ children }) {
     <div className="w-full h-screen">
       <div className="w-full h-full">
         <Header />
-        <main className="w-full h-[calc(100vh-72px)]">{children}</main>
+        <main className="w-full h-[calc(100vh-80px)]">{children}</main>
       </div>
     </div>
   );
