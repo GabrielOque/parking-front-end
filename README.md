@@ -21,7 +21,7 @@
 > Clonar, instalar y levantar primero el backend.
 
 > [!NOTE]
-> Credenciales de usuario: [email: employee1@gmail.com, password: 1234]. Las contraseñas están encriptadas en el backend.
+> Credenciales de usuario: [email: employee1@gmail.com, password: 1234]. Las contraseñas están encriptadas en el backend, la primera vez que hagan login tardará un poco, ya que estos servidores de prueba gratuita cuando tienen un periodo de tiempo sin peticiones entran en un modo off entonces el recivir una nueva petición deben hacer su proceso interno.
 
 > [!NOTE]
 > No se anexa mocks utilizados dado que al crear el front que es algo adicional, no veo necesario agregarlos sin embargo en el proyecto veran un archivo llamado mokcs, no se usó en el proyecto lo hago con el animo de anexarles la base de datos y de nuevo los accesos para hacer login, no deberían necesitarse ya que la api está integrada con el front.
