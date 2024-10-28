@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { logoutEmployee } from "@/app/store/features/employee/employeeSlice";
 import { useSelector } from "react-redux";
+import Image from "next/image";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -25,11 +26,14 @@ const Header = () => {
         onClick={() => router.push("/home")}
         className="flex items-center cursor-pointer"
       >
-        <img
-          src="/Logo.png"
+        <Image
+          src={"/Logo.png"}
           alt="Logo"
-          className="w-12 h-12 object-contain mr-5"
+          width={60}
+          height={40}
+          className="object-contain w-full h-full mr-4"
         />
+
         <h1 className="text-xl font-semibold">EasyPark</h1>
       </div>
       <div className="md:hidden">

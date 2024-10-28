@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
+import Image from "next/image";
 
 import {
   LoginEmployee,
@@ -63,13 +64,16 @@ export default function Login() {
     <div className="flex items-center justify-center min-h-screen bg-gray-900 md:px-20 px-0">
       <div className="bg-gray-800 p-8 rounded-lg shadow-lg lg:w-1/2 2xl:w-1/3 w-full md:px-20">
         <div className="flex flex-col items-center">
-          <div className="bg-white p-2 rounded-full">
-            <img
-              src="/Logo.png"
+          <div>
+            <Image
+              src={"/Logo.png"}
               alt="Logo"
-              className="w-24 h-24 object-contain"
+              width={80}
+              height={80}
+              className="object-contain w-full h-full"
             />
           </div>
+
           <h2 className="text-white text-lg font-semibold mt-4">
             Bienvenido a EasyPark
           </h2>

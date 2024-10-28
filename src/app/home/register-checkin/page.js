@@ -38,10 +38,17 @@ const Register = () => {
     const isValid = validateForm();
     if (!isValid) return;
 
+    let typeV = "";
+    if (nameVehicle === "Carro")
+      typeV = `Carro${Math.floor(Math.random() * 6) + 1}`;
+
+    if (nameVehicle === "Moto")
+      typeV = `Moto${Math.floor(Math.random() * 4) + 1}`;
+
     const registrationData = {
       owner,
       documentNumber,
-      nameVehicle,
+      nameVehicle: typeV,
       checkIn,
       checkOut,
       plate,
@@ -67,11 +74,11 @@ const Register = () => {
     if (cars < 5) {
       freeVehicles = ["Carro"];
     }
-    return [...freeVehicles, ...freeMotoBikes];
+    return [...freeMotoBikes, ...freeVehicles];
   };
 
-  const generateRandomVehicleStyle = (length) => {
-    return Math.floor(Math.random() * length) + 1;
+  const handleChangeVehicle = (e) => {
+    setNameVehicle(e.target.value);
   };
 
   useEffect(() => {
@@ -122,20 +129,17 @@ const Register = () => {
             <label className="block mb-1 text-white">Vehículo:</label>
             <select
               placeholder="Vehículo"
-              value={nameVehicle ? nameVehicle : "Seleccione un vehículo"}
-              onChange={(e) => {
-                const value = e.target.value;
-                if (value === "Carro")
-                  setNameVehicle(`${value}.${generateRandomVehicleStyle(5)}`);
-                if (value === "Moto")
-                  setNameVehicle(`${value}.${generateRandomVehicleStyle(10)}`);
-              }}
+              value={nameVehicle || ""}
+              onChange={handleChangeVehicle}
               className={`bg-gray-700 text-white px-4 py-2 rounded focus:outline-none w-full ${
                 errors.nameVehicle ? "border-red-500 border-2" : ""
               }`}
             >
-              {getFreeVehicles().map((vehicle, index) => (
-                <option key={index} value={vehicle}>
+              <option value="" disabled>
+                Seleccione un vehículo
+              </option>
+              {getFreeVehicles().map((vehicle) => (
+                <option key={vehicle} value={vehicle}>
                   {vehicle}
                 </option>
               ))}
