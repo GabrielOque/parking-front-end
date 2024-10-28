@@ -1,29 +1,29 @@
-> **[!WARNING]**
+> [!WARNING]
 > Tener conexión a internet. La base de datos está en la nube. Si desea levantarla en local, agregue el archivo `.env` en la raíz del proyecto y añada: `NEXT_PUBLIC_API_URL=http://localhost:4000/api`.
 
-> **EasyPark** es una plataforma web que permite registrar autos y motos en un parqueadero. Las capacidades son limitadas.
+> EasyPark es una plataforma web que permite registrar autos y motos en un parqueadero. Las capacidades son limitadas.
 
-> **[!NOTE]**
+> [!NOTE]
 > Asegúrese de tener las versiones estables de Node y npm.
 > Versiones usadas:
 >
 > - Node: v20.9.0
 > - npm: 10.5.2
 
-> **[!NOTE]**
+> [!NOTE]
 > Ejecute `npm install` cuando clone el repositorio para instalar las dependencias. Use `npm run dev` para levantar el proyecto. Recuerde que primero debe tener el backend corriendo y las variables de entorno configuradas.
 
-> **[!IMPORTANT]**
+> [!IMPORTANT]
 > Cree el archivo `.env` y agregue las siguientes variables de entorno:
 > `NEXT_PUBLIC_API_URL=http://localhost:4000/api`.
 
-> **[!IMPORTANT]**
+> [!IMPORTANT]
 > Clonar, instalar y levantar primero el backend.
 
-> **[!NOTE]**
+> [!NOTE]
 > Credenciales de usuario: [email: employee1@gmail.com, password: 1234]. Las contraseñas están encriptadas en el backend.
 
-> **[!WARNING]**
+> [!WARNING]
 > Asegúrese de que la conexión Wi-Fi que tenga al levantar el backend y el frontend no bloquee los puertos, ya que podría causar problemas.
 
 ### Tecnologías
